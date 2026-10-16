@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Boronboyev Zuhridin — Dasturchi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f7fb;--surface:#fff;--ink:#14161f;--muted:#5b6072;--line:#d9dce8;--accent:#2f4bff;--accent-ink:#fff;--soft:#e8ecff;--code-bg:#14161f;--code-ink:#e8eaf5;--k:#8fa0ff;--s:#7ee0b0;--c:#8b90a8;--ok:#1f9d63;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1119;--surface:#171a26;--ink:#eceefa;--muted:#9aa0b8;--line:#2a2f42;--accent:#7f92ff;--accent-ink:#0f1119;--soft:#1f2440;--code-bg:#0a0c13;--ok:#4cd18d;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1119;--surface:#171a26;--ink:#eceefa;--muted:#9aa0b8;--line:#2a2f42;--accent:#7f92ff;--accent-ink:#0f1119;--soft:#1f2440;--code-bg:#0a0c13;--ok:#4cd18d;color-scheme:dark}
+html{scroll-padding-top:calc(4.5rem + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 "Bricolage Grotesque",system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:64rem;margin:0 auto;padding:0 1.25rem}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.top .in{display:flex;justify-content:space-between;align-items:center;height:3.75rem}
+.logo{font-weight:800;font-size:1.1rem;text-decoration:none}
+nav{display:flex;gap:.25rem;align-items:center}
+nav a.l{text-decoration:none;color:var(--muted);padding:.4rem .8rem;border-radius:999px;font-size:.95rem}
+nav a.l:hover{color:var(--ink)}
+nav a.l.on{background:var(--soft);color:var(--accent);font-weight:600}
+.ic{background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:.35rem .85rem;font:inherit;font-size:.85rem;cursor:pointer;margin-left:.5rem}
+.ic:hover{border-color:var(--accent)}
+#menu{display:none}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:2.5rem;align-items:center;padding:4rem 0 4.5rem}
+.pill{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:.3rem .9rem;font-size:.9rem;color:var(--muted);margin-bottom:1.25rem}
+.pill i{width:.55rem;height:.55rem;border-radius:50%;background:var(--ok);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.35}}
+h1{font-size:clamp(2.6rem,7vw,4.8rem);line-height:1;letter-spacing:-.03em;font-weight:800;margin:0 0 1.25rem}
+.lead{color:var(--muted);max-width:30rem;margin:0 0 1.75rem}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.8rem 1.5rem;border-radius:.6rem;text-decoration:none;font-weight:600;border:1px solid var(--ink);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.panel{background:var(--code-bg);border-radius:.9rem;overflow:hidden}
+.tabs{display:flex;gap:.25rem;padding:.6rem .6rem 0;border-bottom:1px solid #ffffff1a}
+.tabs button{background:none;border:0;color:#9aa0b8;font:500 .85rem "JetBrains Mono",monospace;padding:.5rem .9rem;border-radius:.5rem .5rem 0 0;cursor:pointer}
+.tabs button[aria-selected="true"]{background:#ffffff14;color:#fff}
+pre.code{margin:0;color:var(--code-ink);padding:1.3rem 1.5rem;font:500 .9rem/1.8 "JetBrains Mono",ui-monospace,monospace;overflow-x:auto;min-height:11.5rem}
+.k{color:var(--k)}.s{color:var(--s)}.c{color:var(--c)}
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+h2{font-size:1.9rem;letter-spacing:-.02em;margin:0 0 1.5rem}
+.filters{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.chip{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:.35rem 1rem;font:inherit;font-size:.9rem;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1.25rem}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:.9rem;padding:1.5rem;display:flex;flex-direction:column;gap:.6rem;transition:transform .2s,border-color .2s}
+.proj:hover{transform:translateY(-4px);border-color:var(--accent)}
+.proj[hidden]{display:none}
+.proj h3{margin:0;font-size:1.25rem}
+.proj p{margin:0;color:var(--muted)}
+.tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:auto;padding-top:.6rem}
+.tags span{font:500 .78rem "JetBrains Mono",monospace;border:1px solid var(--line);border-radius:.4rem;padding:.15rem .5rem;color:var(--muted)}
+.proj a{font-weight:600;color:var(--accent);text-decoration:none}
+.proj a:hover{text-decoration:underline}
+.line{list-style:none;margin:0;padding:0 0 0 1.5rem;border-left:2px solid var(--line)}
+.line li{position:relative;padding-bottom:1.75rem}
+.line li::before{content:"";position:absolute;left:calc(-1.5rem - 7px);top:.55rem;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--bg)}
+.line b{display:block;font-size:1.1rem}
+.line small{color:var(--muted);font:500 .8rem "JetBrains Mono",monospace}
+.line p{margin:.3rem 0 0;color:var(--muted);max-width:38rem}
+.skills{display:flex;flex-wrap:wrap;gap:.6rem}
+.skills span{background:var(--surface);border:1px solid var(--line);border-radius:.5rem;padding:.45rem .9rem}
+.contact p{max-width:34rem;color:var(--muted)}
+.mailrow{display:flex;flex-wrap:wrap;align-items:center;gap:1rem;margin:1rem 0}
+.mail{font-size:clamp(1.3rem,4vw,2rem);font-weight:800;letter-spacing:-.02em;color:var(--accent);word-break:break-all;text-decoration:none}
+.ib{display:inline-flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:1px solid var(--line);border-radius:50%;background:var(--surface);color:var(--ink);cursor:pointer;padding:0;transition:transform .15s,border-color .15s,color .15s}.ib:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}.ib svg{width:1.3rem;height:1.3rem;fill:currentColor}.ib svg.st{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mailrow #tg{order:1}
+footer{padding:2rem 0 2.5rem;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+#toast{position:fixed;left:50%;bottom:calc(1.5rem + env(safe-area-inset-bottom,0px));transform:translate(-50%,200%);background:var(--ink);color:var(--bg);padding:.7rem 1.2rem;border-radius:.6rem;transition:transform .25s;z-index:40;font-size:.95rem}
+#toast.show{transform:translate(-50%,0)}
+@media (max-width:720px){
+.hero{grid-template-columns:1fr;padding-top:2rem}
+#menu{display:inline-block}
+nav .l{display:none}
+nav.open{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--bg);border-bottom:1px solid var(--line);padding:.5rem 1.25rem 1rem}
+nav.open .l{display:block}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap in">
+  <a class="logo" href="#top">Z.Boronboyev</a>
+  <nav id="nav">
+    <a class="l" href="#loyihalar">Loyihalar</a>
+    <a class="l" href="#konikmalar">Ko'nikmalar</a>
+    <a class="l" href="#aloqa">Aloqa</a>
+    <button class="ic" id="theme" type="button">Rejim</button>
+    <button class="ic" id="menu" type="button" aria-expanded="false">Menyu</button>
+  </nav>
+</div></header>
+
+<div class="wrap" id="top">
+<main>
+<div class="hero">
+  <div>
+    <span class="pill"><i></i>Yangi loyihalar uchun ochiqman</span>
+    <h1>Boronboyev Zuhridin</h1>
+    <p class="lead">Veb-saytlar yaratuvchi dasturchiman. HTML, CSS, JavaScript, Tailwind CSS va React bilan tez va qulay saytlar yarataman.</p>
+    <div class="btns">
+      <a class="btn p" href="#loyihalar">Loyihalarni ko'rish</a>
+      <a class="btn" href="#aloqa">Bog'lanish</a>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="tabs" role="tablist" aria-label="Yo'nalish">
+      <button role="tab" aria-selected="true" data-t="0">frontend</button>
+      <button role="tab" aria-selected="false" data-t="1">dizayn</button>
+      <button role="tab" aria-selected="false" data-t="2">python</button>
+    </div>
+    <pre class="code" id="code" aria-live="polite"></pre>
+  </div>
+</div>
+
+<section id="loyihalar">
+  <h2>Loyihalar</h2>
+  <div class="grid">
+    <article class="proj"><h3>Online moto do'kon</h3><p>Mototsikllar sotiladigan onlayn do'kon sayti.</p><a href="https://onlini-moto-dokon-hfom.vercel.app/" target="_blank" rel="noopener">Saytni ochish</a></article>
+    <article class="proj"><h3>Ish bor</h3><p>Ish e'lonlari va ish izlovchilar uchun sayt.</p><a href="https://ish-bor-seven.vercel.app/" target="_blank" rel="noopener">Saytni ochish</a></article>
+    <article class="proj"><h3>E-commerce</h3><p>Onlayn savdo uchun do'kon sayti.</p><a href="https://zuhriddinboronboyev99-alt.github.io/e-comers/" target="_blank" rel="noopener">Saytni ochish</a></article>
+    <article class="proj"><h3>Coffee Roasters</h3><p>Qahva brendi uchun zamonaviy sayt.</p><a href="https://zuhriddinboronboyev99-alt.github.io/coffeeroasters/" target="_blank" rel="noopener">Saytni ochish</a></article>
+    <article class="proj"><h3>Academ nashir</h3><p>Nashriyot uchun sayt.</p><a href="https://zuhriddinboronboyev99-alt.github.io/academnashir/" target="_blank" rel="noopener">Saytni ochish</a></article>
+    <article class="proj"><h3>Yangi loyiha</h3><p>Vercel'da joylangan veb-loyiha.</p><a href="https://yangi-loyiha-black.vercel.app/" target="_blank" rel="noopener">Saytni ochish</a></article>
+  </div>
+</section>
+
+<section id="konikmalar">
+  <h2>Ko'nikmalar</h2>
+  <div class="skills"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Tailwind CSS</span><span>React</span><span>Python</span><span>Git</span><span>Git Bash</span></div>
+</section>
+
+<section id="aloqa" class="contact">
+  <h2>Aloqa</h2>
+  <p>Loyiha, ish taklifi yoki hamkorlik bo'yicha yozing. Odatda bir kun ichida javob beraman.</p>
+  <div class="mailrow">
+    <a class="ib" id="mail" href="https://mail.google.com/mail/?view=cm&to=zuhriddinboronboyev99@gmail.com" target="_blank" rel="noopener" aria-label="Email yuborish" title="Email yuborish"><svg class="st" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+    <a class="ib" id="tg" href="https://t.me/zuhrudin" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
+    <a class="ib" href="https://github.com/zuhriddinboronboyev99-alt" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg></a>
+  </div>
+</section>
+</main>
+<footer>© 2026 Boronboyev Zuhridin</footer>
+</div>
+<div id="toast" role="status"></div>
+
+<script>
+(function(){
+var r=document.documentElement,$=function(s){return document.querySelector(s)},$$=function(s){return [].slice.call(document.querySelectorAll(s))};
+$("#theme").onclick=function(){var d=r.getAttribute("data-theme")||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light");r.setAttribute("data-theme",d==="dark"?"light":"dark")};
+var nav=$("#nav"),mb=$("#menu");
+mb.onclick=function(){var o=nav.classList.toggle("open");mb.setAttribute("aria-expanded",o)};
+$$("nav .l").forEach(function(a){a.onclick=function(){nav.classList.remove("open");mb.setAttribute("aria-expanded","false")}});
+var T=[
+'<span class="c">// frontend</span>\n<span class="k">const</span> stek = [<span class="s">"React"</span>, <span class="s">"JavaScript"</span>];\n<span class="k">const</span> maqsad = <span class="s">"tez va qulay interfeys"</span>;\n<span class="k">const</span> ochiq = <span class="k">true</span>;',
+'<span class="c">// dizayn</span>\n<span class="k">const</span> stek = [<span class="s">"HTML"</span>, <span class="s">"CSS"</span>, <span class="s">"Tailwind"</span>];\n<span class="k">const</span> maqsad = <span class="s">"chiroyli va moslashuvchan sahifa"</span>;\n<span class="k">const</span> ochiq = <span class="k">true</span>;',
+'<span class="c">// python</span>\n<span class="k">const</span> stek = [<span class="s">"Python"</span>];\n<span class="k">const</span> maqsad = <span class="s">"doimiy rivojlanish"</span>;\n<span class="k">const</span> ochiq = <span class="k">true</span>;'];
+function tab(i){$$(".tabs button").forEach(function(b,j){b.setAttribute("aria-selected",i===j)});$("#code").innerHTML=T[i]}
+$$(".tabs button").forEach(function(b){b.onclick=function(){tab(+b.dataset.t)}});tab(0);
+$$(".chip").forEach(function(c){c.onclick=function(){$$(".chip").forEach(function(x){x.setAttribute("aria-pressed",x===c)});$$(".proj").forEach(function(p){p.hidden=!(c.dataset.f==="all"||p.dataset.c===c.dataset.f)})}});
+var links=$$("nav a.l"),secs=$$("main section");
+if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(l){l.classList.toggle("on",l.getAttribute("href")==="#"+e.target.id)})}})},{rootMargin:"-40% 0px -55% 0px"});secs.forEach(function(s){io.observe(s)})}
+$("#tg").onclick=function(e){e.preventDefault();var left=false;function b(){left=true}window.addEventListener("blur",b,{once:true});var a=document.createElement("a");a.href="tg://resolve?domain=zuhrudin";document.body.appendChild(a);a.click();a.remove();setTimeout(function(){window.removeEventListener("blur",b);if(!left)window.open("https://t.me/zuhrudin","_blank","noopener")},900)};
+var tt;function toast(m){var t=$("#toast");t.textContent=m;t.classList.add("show");clearTimeout(tt);tt=setTimeout(function(){t.classList.remove("show")},1800)}
+
+})();
+</script>
+</body>
+</html>
